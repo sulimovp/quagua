@@ -12,7 +12,7 @@ The same encoded representations can be fed to **attack** regressors or classifi
 
 ## How to run
 
-Inspect `examples/notebooks/` for end-to-end cells: they typically load data from `quagua.data_utils`, build an encoder or pipeline, then call framework methods. The exact method names and return dictionaries are defined in `quagua/evaluation/framework.py`; your notebook should match the version you installed.
+Load data with `quagua.data_utils`, build an encoder or pipeline, then call `PrivacyAITestFramework` methods in your own script. The exact method names and return dictionaries are defined in `quagua/evaluation/framework.py` — always match the version you installed.
 
 ## Interpreting output
 

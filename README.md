@@ -2,7 +2,7 @@
 
 QuaGua is a small Python library for **encode-then-mix** pipelines on tabular data: you apply an encoder (often expanding or scrambling features), then a mixer that combines dimensions. It also ships an **evaluation harness** that measures downstream task performance (accuracy, F1, AUC) and simple **reconstruction-style attacks** (linear models, random forest, MLP) so you can compare utility and attack success in one place.
 
-This is research and engineering tooling, not a certified privacy product. It does **not** implement differential privacy or formal guarantees. Use it to prototype and to run controlled experiments; treat reported numbers as dataset- and model-dependent.
+This is engineering tooling for prototyping and evaluation, not a certified privacy product. It does **not** implement differential privacy or formal guarantees. Use it to run controlled experiments; treat reported numbers as dataset- and model-dependent.
 
 ## Install
 
@@ -17,7 +17,7 @@ python -m venv .venv
 pip install -e ".[dev]"
 ```
 
-The base install pulls in NumPy, pandas, scikit-learn, and SciPy. The `dev` extra adds Jupyter, Matplotlib, and pytest for notebooks and tests.
+The base install pulls in NumPy, pandas, scikit-learn, and SciPy. The `dev` extra adds pytest for running the test suite.
 
 ## Quick start
 
@@ -40,19 +40,14 @@ X_out = pipe.fit_transform(X)
 print(X.shape, "->", X_out.shape)
 ```
 
-For a full walkthrough (datasets, evaluation API, optional quantum-inspired encoders), see [docs/overview.md](docs/overview.md) and [docs/evaluation.md](docs/evaluation.md).
-
-## Examples
-
-- **Notebooks:** `examples/notebooks/` — encoder demos and evaluation runs (open in Jupyter after `pip install -e ".[dev]"`).
-- **Scripts:** `scripts/generate_sex_tables.py` — reads `results/evaluation_results.pkl` and writes LaTeX fragments into `paper_tables/` (see script docstring).
+For API details, optional quantum-inspired encoders, and the evaluation framework, see [docs/overview.md](docs/overview.md) and [docs/evaluation.md](docs/evaluation.md).
 
 ## Documentation
 
 | Document | Contents |
 |----------|----------|
 | [docs/overview.md](docs/overview.md) | Scope, components, what is optional |
-| [docs/installation.md](docs/installation.md) | Environments, editable install, notebooks |
+| [docs/installation.md](docs/installation.md) | Environments, editable install |
 | [docs/evaluation.md](docs/evaluation.md) | `PrivacyAITestFramework` and metrics |
 | [docs/datasets.md](docs/datasets.md) | Built-in loaders (Titanic, Adult, etc.) |
 | [docs/threat_model.md](docs/threat_model.md) | Non-goals and how to read attack scores |

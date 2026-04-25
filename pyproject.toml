@@ -9,7 +9,7 @@ description = "Encode-then-mix obfuscation and linear attack evaluation for tabu
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "Apache-2.0" }
-authors = [{ name = "Triangulo contributors" }]
+authors = [{ name = "Arraxis contributors" }]
 keywords = ["privacy", "tabular", "machine-learning", "obfuscation", "encoding"]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -32,8 +32,6 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    "jupyter>=1.0.0",
-    "matplotlib>=3.4.0",
     "pytest>=7.0.0",
 ]
 

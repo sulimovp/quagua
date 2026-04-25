@@ -33,21 +33,11 @@ pip install -U pip
 pip install -e .
 ```
 
-With development dependencies (Jupyter, Matplotlib, pytest):
+With development dependencies (pytest):
 
 ```bash
 pip install -e ".[dev]"
 ```
-
-## Notebooks
-
-After the editable install, start Jupyter from the repo root or any subdirectory:
-
-```bash
-jupyter notebook
-```
-
-Open files under `examples/notebooks/`. Kernel should resolve the local `quagua` package via the editable install.
 
 ## Offline or locked networks
 

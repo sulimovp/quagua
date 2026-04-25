@@ -24,7 +24,5 @@ Numbers depend on the dataset, train/test split, random seeds, and model choices
 ## Repository layout
 
 - `quagua/` — installable package
-- `examples/notebooks/` — runnable demos
-- `scripts/` — standalone utilities
 - `docs/` — prose documentation
-- `results/` — optional cached evaluation outputs if you generate them locally
+- `tests/` — pytest suite
